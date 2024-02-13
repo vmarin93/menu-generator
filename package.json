@@ -1,23 +1,22 @@
 {
-  "dependencies": {
-    "mustache": "^4.2.0"
-  },
-  "name": "breakfast-menu",
-  "description": "// install mustache templates     npm install mustache --save",
-  "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vmarin93/breakfast-menu.git"
-  },
-  "author": "vasile marin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vmarin93/breakfast-menu/issues"
-  },
-  "homepage": "https://github.com/vmarin93/breakfast-menu#readme"
+	"dependencies": {
+		"mustache": "^4.2.0"
+	},
+	"name": "breakfast-menu",
+	"description": "// install mustache templates     npm install mustache --save",
+	"version": "1.0.0",
+	"main": "index.mjs",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vmarin93/breakfast-menu.git"
+	},
+	"author": "vasile marin",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/vmarin93/breakfast-menu/issues"
+	},
+	"homepage": "https://github.com/vmarin93/breakfast-menu#readme"
 }
