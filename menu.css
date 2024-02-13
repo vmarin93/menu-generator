@@ -1,0 +1,64 @@
+body {
+	width: 100%;
+	font-family: Helvetica, sans-serif;
+	background-image: url(https://ladbrokehall.com/wp-content/uploads/sb-instagram-feed-images/423815011_3583224078585787_4262403876898823159_nfull.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	text-align: center;
+	color: #a75d03;
+}
+
+header h1 {
+	font-size: 2.5rem;
+	margin: 0;
+}
+
+header p {
+	font-style: italic;
+	font-size: 1.2rem;
+	margin: 0px 0;
+	color: #3d2a13;
+}
+
+main {
+	text-align: center;
+	background-color: rgba(255, 228, 196, 0.521);
+	margin-left: -10px;
+}
+
+section {
+	margin: 50px 165px 0 165px;
+}
+
+.week-days {
+	display: flex;
+	justify-content: space-around;
+	margin: -10px auto;
+}
+
+.week {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	margin: -10px auto;
+}
+
+.day {
+	margin-bottom: -10px;
+}
+
+.day p {
+	font-style: italic;
+	padding-left: 20px;
+}
+
+footer {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: #f8dcba;
+}
