@@ -4,40 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Update Menu</title>
+		<link rel="stylesheet" href="input.css" />
 	</head>
 	<body>
 		<header><h1>Update Staff Breakfast Menu</h1></header>
-
 		<main>
-			<form id="dateForm">
-				<label for="date"> Date: <input id="date" type="text" /> </label>
-				<!-- <fieldset>
-					<legend>Week 1</legend>
-					<fieldset>
-						<legend>Tuesday</legend>
-						<label> Dish: <input id="dish1TuesdayWeek1" type="text" /> </label>
-						<label>
-							Description:<input id="description1TuesdayWeek1" type="text" />
-						</label>
-						<label> Dish: <input id="dish2TuesdayWeek1" type="text" /> </label>
-						<label>
-							Description:<input id="description2Tuesday1week1" type="text" />
-						</label>
-					</fieldset>
-					<fieldset>
-						<legend>Wednesday</legend>
-						<label> Dish: <input id="dish1day2week1" type="text" /> </label>
-						<label>
-							Description:<input id="description1day2week1" type="text" />
-						</label>
-						<label> Dish: <input id="dish2day2week1" type="text" /> </label>
-						<label>
-							Description:<input id="description2day2week1" type="text" />
-						</label>
-					</fieldset>
-				</fieldset> -->
-				<button type="submit">Change Menu</button>
+			<form id="inputs">
+				<div class="date-submit">
+					<label for="date"> Date: <input id="date" type="text" /> </label>
+					<button type="submit">Change Menu</button>
+				</div>
 			</form>
+			<script type="module" src="generateInputs.js"></script>
 			<script type="module" src="handleInput.js"></script>
 		</main>
 	</body>

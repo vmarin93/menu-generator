@@ -7,6 +7,7 @@ const menuData = [
 		week: 'Week 1',
 		days: [
 			{
+				id: 1,
 				day: 'Tuesday',
 				dish1: 'Bircher Muesli',
 				dish1Description: '',
@@ -14,6 +15,7 @@ const menuData = [
 				dish2Description: 'with berry compote / granola',
 			},
 			{
+				id: 2,
 				day: 'Wednesday',
 				dish1: 'Blueberry Muffins',
 				dish1Description: '',
@@ -26,6 +28,7 @@ const menuData = [
 		week: 'Week 2',
 		days: [
 			{
+				id: 3,
 				day: 'Tuesday',
 				dish1: 'American Pancakes',
 				dish1Description: 'with berries / maple syrup',
@@ -33,6 +36,7 @@ const menuData = [
 				dish2Description: 'with berry compote / granola',
 			},
 			{
+				id: 4,
 				day: 'Wednesday',
 				dish1: 'Avocado Yoghurt',
 				dish1Description: 'with berry compote / granola',
@@ -45,6 +49,7 @@ const menuData = [
 		week: 'Week 3',
 		days: [
 			{
+				id: 5,
 				day: 'Tuesday',
 				dish1: 'Oatmeal Muffins',
 				dish1Description: 'with raisins',
@@ -52,6 +57,7 @@ const menuData = [
 				dish2Description: '',
 			},
 			{
+				id: 6,
 				day: 'Wednesday',
 				dish1: 'Waffles',
 				dish1Description: 'with maple syrup',
@@ -64,6 +70,7 @@ const menuData = [
 		week: 'Week 4',
 		days: [
 			{
+				id: 7,
 				day: 'Tuesday',
 				dish1: 'Fruit Salad',
 				dish1Description: '',
@@ -71,6 +78,7 @@ const menuData = [
 				dish2Description: 'with nutella',
 			},
 			{
+				id: 8,
 				day: 'Wednesday',
 				dish1: 'Doughnuts',
 				dish1Description: '',
