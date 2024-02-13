@@ -1,6 +1,6 @@
 import Mustache from './node_modules/mustache/mustache.mjs';
 
-const date = 'February - March 2024';
+const date = localStorage.getItem('date');
 
 const menuData = [
 	{
@@ -81,11 +81,17 @@ const menuData = [
 	},
 ];
 
-const dateTemplate = document.getElementById('date-template').innerHTML;
-const menuTemplate = document.getElementById('menu-template').innerHTML;
+// this is the logic that handles the rendering of the data inside the menu
 
-const dateRendered = Mustache.render(dateTemplate, { date });
-const menuRendered = Mustache.render(menuTemplate, { weeks: menuData });
+function renderMenu() {
+	const dateTemplate = document.getElementById('date-template').innerHTML;
+	const menuTemplate = document.getElementById('menu-template').innerHTML;
 
-document.getElementById('header').innerHTML = dateRendered;
-document.getElementById('menu').innerHTML = menuRendered;
+	const dateRendered = Mustache.render(dateTemplate, { date });
+	const menuRendered = Mustache.render(menuTemplate, { weeks: menuData });
+
+	document.getElementById('header').innerHTML = dateRendered;
+	document.getElementById('menu').innerHTML = menuRendered;
+}
+
+renderMenu();
