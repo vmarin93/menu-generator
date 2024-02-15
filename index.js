@@ -1,26 +1,25 @@
 import Mustache from './node_modules/mustache/mustache.mjs';
 
 const date = localStorage.getItem('date');
+const formData = JSON.parse(localStorage.getItem('formData'));
 
 const menuData = [
 	{
 		week: 'Week 1',
 		days: [
 			{
-				id: 1,
 				day: 'Tuesday',
-				dish1: 'Bircher Muesli',
+				dish0: '',
+				dish0Description: '',
+				dish1: '',
 				dish1Description: '',
-				dish2: 'Greek Yoghurt',
-				dish2Description: 'with berry compote / granola',
 			},
 			{
-				id: 2,
 				day: 'Wednesday',
-				dish1: 'Blueberry Muffins',
+				dish0: '',
+				dish0Description: '',
+				dish1: '',
 				dish1Description: '',
-				dish2: 'Croissant / Pain au Chocolat',
-				dish2Description: '',
 			},
 		],
 	},
@@ -28,20 +27,18 @@ const menuData = [
 		week: 'Week 2',
 		days: [
 			{
-				id: 3,
 				day: 'Tuesday',
-				dish1: 'American Pancakes',
-				dish1Description: 'with berries / maple syrup',
-				dish2: 'Acai Yoghurt',
-				dish2Description: 'with berry compote / granola',
+				dish0: '',
+				dish0Description: '',
+				dish1: '',
+				dish1Description: '',
 			},
 			{
-				id: 4,
 				day: 'Wednesday',
-				dish1: 'Avocado Yoghurt',
-				dish1Description: 'with berry compote / granola',
-				dish2: 'Blueberry Pancakes',
-				dish2Description: 'with whipped cream',
+				dish0: '',
+				dish0Description: '',
+				dish1: '',
+				dish1Description: '',
 			},
 		],
 	},
@@ -49,20 +46,18 @@ const menuData = [
 		week: 'Week 3',
 		days: [
 			{
-				id: 5,
 				day: 'Tuesday',
-				dish1: 'Oatmeal Muffins',
-				dish1Description: 'with raisins',
-				dish2: 'Cereal',
-				dish2Description: '',
+				dish0: '',
+				dish0Description: '',
+				dish1: '',
+				dish1Description: '',
 			},
 			{
-				id: 6,
 				day: 'Wednesday',
-				dish1: 'Waffles',
-				dish1Description: 'with maple syrup',
-				dish2: 'Fresh Fruit',
-				dish2Description: '',
+				dish0: '',
+				dish0Description: '',
+				dish1: '',
+				dish1Description: '',
 			},
 		],
 	},
@@ -70,35 +65,51 @@ const menuData = [
 		week: 'Week 4',
 		days: [
 			{
-				id: 7,
 				day: 'Tuesday',
-				dish1: 'Fruit Salad',
+				dish0: '',
+				dish0Description: '',
+				dish1: '',
 				dish1Description: '',
-				dish2: 'Crepes',
-				dish2Description: 'with nutella',
 			},
 			{
-				id: 8,
 				day: 'Wednesday',
-				dish1: 'Doughnuts',
+				dish0: '',
+				dish0Description: '',
+				dish1: '',
 				dish1Description: '',
-				dish2: 'Buttermilk Scones',
-				dish2Description: 'with jam / clotted cream',
 			},
 		],
 	},
 ];
 
-// this is the logic that handles the rendering of the data inside the menu
+for (let i = 0; i < formData.length; i += 2) {
+	const dish = formData[i];
+	const description = formData[i + 1];
 
-function renderMenu() {
+	const weekIndex = Math.floor(i / 8);
+	const dayIndex = Math.floor((i % 8) / 4);
+	const dishIndex = (i % 4) / 2 + 1;
+
+	const day = menuData[weekIndex].days[dayIndex];
+	day[`dish${dishIndex}`] = dish;
+	day[`dish${dishIndex}Description`] = description;
+}
+
+function renderDate() {
 	const dateTemplate = document.getElementById('date-template').innerHTML;
-	const menuTemplate = document.getElementById('menu-template').innerHTML;
 
 	const dateRendered = Mustache.render(dateTemplate, { date });
+
+	document.getElementById('date').innerHTML = dateRendered;
+}
+
+renderDate();
+
+function renderMenu() {
+	const menuTemplate = document.getElementById('menu-template').innerHTML;
+
 	const menuRendered = Mustache.render(menuTemplate, { weeks: menuData });
 
-	document.getElementById('header').innerHTML = dateRendered;
 	document.getElementById('menu').innerHTML = menuRendered;
 }
 

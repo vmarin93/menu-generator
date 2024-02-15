@@ -8,10 +8,15 @@
 	</head>
 	<body>
 		<header id="header">
-			<script id="date-template" type="text/template">
-				<h1>Staff Breakfast Menu</h1>
-				<p><strong>Ladbrooke Hall</strong> {{date}}</p>
-			</script>
+			<h1>Staff Breakfast Menu</h1>
+			<p>
+				<strong>Ladbrooke Hall</strong>
+				<span id="date"
+					><script id="date-template" type="text/template">
+						{{date}}
+					</script></span
+				>
+			</p>
 		</header>
 		<main id="menu">
 			<script id="menu-template" type="text/template">
