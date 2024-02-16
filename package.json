@@ -5,7 +5,7 @@
 	"name": "breakfast-menu",
 	"description": "// install mustache templates     npm install mustache --save",
 	"version": "1.0.0",
-	"main": "index.mjs",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
