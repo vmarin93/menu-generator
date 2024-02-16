@@ -18,10 +18,8 @@ main {
 	align-items: baseline;
 	gap: 20px;
 	margin-bottom: 20px;
-}
-
-.date-submit input {
-	width: 200px;
+	height: 3.2vw;
+	min-width: 325px;
 }
 
 .date-submit button {
@@ -30,7 +28,8 @@ main {
 	background-color: #24acc76e;
 	color: #ffffffb0;
 	border-radius: 2px;
-	height: 3.4vw;
+	height: inherit;
+	width: inherit;
 }
 
 .date-submit button:hover {
@@ -83,16 +82,12 @@ label {
 	}
 
 	.date-submit {
-		flex-wrap: wrap;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: auto;
-	}
-
-	.date-submit button {
-		padding: 10px;
-		width: 65vw;
+		margin: 40px 0;
 		height: 14vw;
+		min-width: 325px;
 	}
 
 	input {
@@ -102,13 +97,12 @@ label {
 
 	.weeks {
 		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
+		justify-content: space-between;
 		margin: auto;
 	}
 
 	.days {
-		align-items: center;
+		align-items: end;
 		margin: auto;
 	}
 }
