@@ -1,13 +1,10 @@
 body {
-	background-color: color-mix(
-		in hsl longer hue,
-		rgba(122, 110, 110, 0.267) 20%,
-		green 30%
-	);
+	background-color: #1f2a2c;
 }
 
 header {
 	text-align: center;
+	color: #24acc7a9;
 }
 
 main {
@@ -27,33 +24,41 @@ main {
 }
 
 .date-submit button {
-	padding: 12px 30px;
+	font-size: 1.3rem;
+	padding: 5px 50px;
+	background-color: #24acc76e;
+	color: #ffffffb0;
+	border-radius: 2px;
+}
+
+.date-submit button:hover {
+	background-color: #24acc7b9;
 }
 
 input {
 	height: 30px;
 	min-width: 325px;
-	background-color: color-mix(
-		in hsl longer hue,
-		rgba(122, 110, 110, 0.384) 20%,
-		rgba(65, 187, 65, 0.24) 30%
-	);
-	border-color: darkgrey;
-	color: rgb(255, 255, 255);
+	background-color: #1f2a2c00;
+	border-color: #e74d3c56;
+	color: #bac9ceea;
 	font-size: 1.3rem;
 }
 
 .weeks {
 	display: flex;
 	justify-content: space-between;
+	color: #24acc7a9;
+	border: none;
 }
 
 .days {
+	color: #e74d3ce3;
 	display: flex;
 	flex-direction: column;
 	align-items: end;
 	margin: 0 auto;
 	gap: 10px;
+	border: none;
 }
 
 .weeks legend {
@@ -66,4 +71,5 @@ input {
 
 label {
 	font-weight: bold;
+	color: #24acc7a9;
 }
