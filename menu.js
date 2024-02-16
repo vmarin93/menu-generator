@@ -1,8 +1,54 @@
 import Mustache from './node_modules/mustache/mustache.mjs';
-import { menuData } from './menuData.js';
 
 const date = localStorage.getItem('date');
 const formData = JSON.parse(localStorage.getItem('formData'));
+
+const menuData = [
+	{
+		week: 'Week 1',
+		days: [
+			{
+				day: 'Tuesday',
+			},
+			{
+				day: 'Wednesday',
+			},
+		],
+	},
+	{
+		week: 'Week 2',
+		days: [
+			{
+				day: 'Tuesday',
+			},
+			{
+				day: 'Wednesday',
+			},
+		],
+	},
+	{
+		week: 'Week 3',
+		days: [
+			{
+				day: 'Tuesday',
+			},
+			{
+				day: 'Wednesday',
+			},
+		],
+	},
+	{
+		week: 'Week 4',
+		days: [
+			{
+				day: 'Tuesday',
+			},
+			{
+				day: 'Wednesday',
+			},
+		],
+	},
+];
 
 for (let i = 0; i < formData.length; i += 2) {
 	const dish = formData[i];

@@ -1,6 +1,7 @@
+// GENERATE INPUTS
 for (let i = 0; i < 8; i++) {
 	for (let j = 0; j < 2; j++) {
-		// LABELS
+		// labels
 		const dishLabel = document.createElement('label');
 		dishLabel.setAttribute('for', `dish${j}-day${i}`);
 		dishLabel.textContent = `Dish${j + 1}: `;
@@ -9,7 +10,7 @@ for (let i = 0; i < 8; i++) {
 		descriptionLabel.setAttribute('for', `description${j}-day${i}`);
 		descriptionLabel.textContent = `Description${j + 1}: `;
 
-		// INPUTS
+		// inputs
 		const dishInput = document.createElement('input');
 		dishInput.setAttribute('id', `dish${j}-day${i}`);
 		dishInput.setAttribute('name', `dish${j}-day${i}`);
@@ -20,7 +21,7 @@ for (let i = 0; i < 8; i++) {
 		descriptionInput.setAttribute('name', `description${j}-day${i}`);
 		descriptionInput.setAttribute('type', 'text');
 
-		// APPENDING
+		// appending
 		dishLabel.appendChild(dishInput);
 		descriptionLabel.appendChild(descriptionInput);
 
@@ -33,3 +34,22 @@ for (let i = 0; i < 8; i++) {
 		}
 	}
 }
+
+// HANDLE INPUTS
+const inputForm = document.getElementById('inputs');
+
+document.getElementById('submit').addEventListener('click', function (event) {
+	event.preventDefault();
+
+	const dateInput = document.getElementById('date').value;
+
+	const formData = [];
+	for (const [key, value] of new FormData(inputForm).entries()) {
+		formData.push(value);
+	}
+
+	localStorage.setItem('date', dateInput);
+	localStorage.setItem('formData', JSON.stringify(formData));
+
+	window.location.href = 'menu.html';
+});
