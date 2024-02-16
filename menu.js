@@ -1,4 +1,4 @@
-import Mustache from './node_modules/mustache/mustache.mjs';
+import Mustache from 'https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.js';
 
 const date = localStorage.getItem('date');
 const formData = JSON.parse(localStorage.getItem('formData'));
