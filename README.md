@@ -1,6 +1,8 @@
 # menu-generator
 
-A very simplistic tool to automate the creation of restaurant menus.
+A very simple tool to automate the creation of restaurant menus.
+
+Built using <a href="https://mustache.github.io/" alt="{{ mustache }}">{{ mustache }}</a> templating.
 
 You can see the current menu or change it by filling in a form with all the dishes that you want to change.
 
