@@ -24,26 +24,29 @@ header p {
 }
 
 main {
+	min-width: 50%;
+	max-width: fit-content;
+	margin: auto;
 	text-align: center;
 	background-color: rgba(255, 228, 196, 0.521);
-	margin-left: -10px;
 }
 
 section {
-	margin: 50px 165px 0 165px;
+	margin: auto;
+	padding: 0 50px;
 }
 
 .week-days {
 	display: flex;
 	justify-content: space-around;
-	margin: -10px auto;
+	margin: auto;
 }
 
 .week {
 	display: flex;
 	justify-content: space-between;
 	text-align: left;
-	margin: -10px auto;
+	margin: auto;
 }
 
 .day {
@@ -61,4 +64,32 @@ footer {
 	font-size: 1.1rem;
 	font-weight: bold;
 	color: #f8dcba;
+}
+
+@media only screen and (max-width: 600px) {
+	header h1 {
+		font-size: 1.5rem;
+	}
+
+	header p {
+		font-size: 1rem;
+	}
+
+	main {
+		padding: 10px;
+	}
+
+	section {
+		margin: 10px 0;
+	}
+
+	.day p {
+		padding-left: 5px;
+		margin: 0 5px;
+	}
+
+	footer {
+		font-size: 1rem;
+		margin-top: 10px;
+	}
 }
